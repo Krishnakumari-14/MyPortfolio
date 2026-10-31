@@ -44,8 +44,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               alt={project.title}
               className="w-full h-full object-cover"
               onError={(e) => {
-                // Resilient CSS Fallback container
-                (e.target as HTMLElement).style.display = 'none';
+                if (project.fallbackImage && (e.target as HTMLImageElement).src !== project.fallbackImage) {
+                  (e.target as HTMLImageElement).src = project.fallbackImage;
+                }
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />

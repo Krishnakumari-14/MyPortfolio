@@ -67,7 +67,9 @@ export const Projects: React.FC = () => {
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      (e.target as HTMLElement).style.display = 'none';
+                      if (project.fallbackImage && (e.target as HTMLImageElement).src !== project.fallbackImage) {
+                        (e.target as HTMLImageElement).src = project.fallbackImage;
+                      }
                     }}
                   />
                   {/* Subtle Gradient Scrim */}

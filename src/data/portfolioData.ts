@@ -1,3 +1,7 @@
+import expenseTrackerImg from '../assets/images/project_expense_tracker.jpg';
+import stationeryShopImg from '../assets/images/project_stationery_shop.jpg';
+import fleetAnalyticsImg from '../assets/images/project_fleet_analytics.jpg';
+
 export interface Project {
   id: string;
   title: string;
@@ -7,6 +11,7 @@ export interface Project {
   longDescription: string;
   technologies: string[];
   image: string;
+  fallbackImage?: string;
   features: string[];
   architecture?: string[];
   githubUrl: string;
@@ -237,7 +242,8 @@ export const PROJECTS: Project[] = [
     longDescription:
       'The AI Expense Tracker helps individuals seamlessly log daily financial expenditures and view categorical breakdowns. Built with Python and Flask with clean HTML/CSS frontend templates, the system automates expense categorization, tracks historical transactions, and presents intuitive dashboard visualizations to help users understand their spending behaviors.',
     technologies: ['Python', 'Flask', 'HTML', 'CSS', 'GitHub'],
-    image: '/src/assets/images/project_expense_tracker_1793459516376.jpg',
+    image: expenseTrackerImg,
+    fallbackImage: '/projects/project_expense_tracker.jpg',
     features: [
       'Built a web application to record and manage daily expenses',
       'Integrated expense categorization and transaction history tracking',
@@ -257,7 +263,8 @@ export const PROJECTS: Project[] = [
     longDescription:
       'A responsive, static e-commerce platform developed using pure HTML and CSS to display an array of stationery essentials, writing instruments, and creative supplies. Features structured product catalogs for frictionless navigation and refined layouts optimized for cross-device usability and instant page loading.',
     technologies: ['HTML', 'CSS', 'GitHub', 'Responsive Design'],
-    image: '/src/assets/images/project_stationery_shop_1793459518085.jpg',
+    image: stationeryShopImg,
+    fallbackImage: '/projects/project_stationery_shop.jpg',
     features: [
       'Designed a static e-commerce platform to showcase stationery products',
       'Structured product sections for convenient browsing and discovery',
@@ -277,7 +284,8 @@ export const PROJECTS: Project[] = [
     longDescription:
       'An enterprise-grade business intelligence and telemetry analytics solution created with IBM Cognos Analytics. It aggregates trip metrics, monitor vehicle breakdowns, tracks fuel expenditure, and generates executive-ready reports evaluating delivery performance, driver ratings, and route optimization.',
     technologies: ['IBM Cognos Analytics', 'Data Visualization', 'Reporting', 'GitHub'],
-    image: '/src/assets/images/project_fleet_analytics_1793459518656.jpg',
+    image: fleetAnalyticsImg,
+    fallbackImage: '/projects/project_fleet_analytics.jpg',
     features: [
       'Created dashboards to track deliveries, vehicle breakdowns, and fuel costs',
       'Prepared reports to analyze delivery performance, driver ratings, and route efficiency',

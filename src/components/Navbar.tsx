@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenExport }) =>
           {/* Zone 3: Primary Action & Quick Tools */}
           <div className="flex items-center gap-2.5 shrink-0">
             <a
-              href="/public/resume.pdf"
+              href="/resume.pdf"
               download="Krishnakumari_KR_Resume.pdf"
               title="Download Resume PDF"
               className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium text-slate-300 hover:text-white border border-slate-700/80 hover:border-slate-600 rounded-lg bg-slate-900/60 transition-colors whitespace-nowrap shrink-0"
@@ -135,7 +135,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume, onOpenExport }) =>
 
           <div className="pt-3 border-t border-slate-800 flex flex-col gap-2">
             <a
-              href="/public/resume.pdf"
+              href="/resume.pdf"
               download="Krishnakumari_KR_Resume.pdf"
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-mono font-medium text-slate-200 border border-slate-700 rounded-lg bg-slate-900"
             >

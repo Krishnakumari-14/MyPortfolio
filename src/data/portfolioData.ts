@@ -87,8 +87,8 @@ export const PERSONAL_INFO = {
   github: 'https://github.com/Krishnakumari-14',
   githubUser: 'Krishnakumari-14',
   linkedin: 'https://linkedin.com/in/krishna-kumari-k-r-18211337b',
-  avatar: '/public/passport.jpeg',
-  resumePdfUrl: '/public/resume.pdf',
+  avatar: '/passport.jpeg',
+  resumePdfUrl: '/resume.pdf',
   professionalSummary:
     'Final-year B.E. Computer Science and Engineering student with knowledge of Python, programming fundamentals, data analysis, and software development concepts. Familiar with problem-solving, analytical thinking, and developing academic projects. Eager to learn new technologies, enhance technical skills, and contribute to organizational growth in an entry-level IT role.',
   keyHighlights: [

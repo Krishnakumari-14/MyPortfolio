@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Download, Mail, Github, Linkedin, MapPin, Award, CheckCircle2, Phone, Sparkles, ExternalLink, ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import passportPhoto from '../assets/passport.jpeg';
 
 interface HeroProps {
   onOpenResume: () => void;
@@ -111,7 +112,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <div className="flex items-center gap-2">
                 {/* Direct download of user's PDF resume */}
                 <a
-                  href="/public/resume.pdf"
+                  href="/resume.pdf"
                   download="Krishnakumari_KR_Resume.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl bg-emerald-400 hover:bg-emerald-300 text-slate-950 transition-all duration-200 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] active:scale-95"
                 >
@@ -180,16 +181,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               {/* Photo Frame Card */}
               <div className="relative rounded-2xl p-2.5 bg-[#0d1424] border border-slate-800 shadow-2xl backdrop-blur-sm">
                 <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-xl overflow-hidden bg-slate-900">
-                  {/* Real Passport Photo from Attachment */}
+                  {/* Real Passport Photo from Attachment (bundled asset with root fallback) */}
                   <img
-                    src="/public/assets/aistudio/passport_bdf8d1a9.jpeg"
+                    src={passportPhoto}
                     alt="Passport photo of Krishna Kumari K R"
                     referrerPolicy="no-referrer"
                     onLoad={() => setPhotoLoaded(true)}
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      // Fallback to copied path if needed
-                      (e.target as HTMLImageElement).src = '/public/passport.jpeg';
+                      (e.target as HTMLImageElement).src = '/passport.jpeg';
                     }}
                   />
 

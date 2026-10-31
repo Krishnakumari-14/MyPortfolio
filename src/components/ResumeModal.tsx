@@ -32,7 +32,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           <div className="flex items-center gap-2">
             {/* Direct download of verified uploaded PDF */}
             <a
-              href="/public/resume.pdf"
+              href="/resume.pdf"
               download="Krishnakumari_KR_Resume_final.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-950 transition-colors shadow-sm"
               title="Download Original PDF Resume"
